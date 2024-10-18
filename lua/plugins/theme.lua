@@ -6,7 +6,10 @@ return {
 		priority = 1000,
 		opts = {},
 		config = function()
-			require("dracula").setup({})
+			require("dracula").setup({
+				style = "soft",
+				transparent = true,
+			})
 			vim.cmd("colorscheme dracula")
 			vim.api.nvim_set_hl(0, "Normal", { bg = "none" })
 			vim.api.nvim_set_hl(0, "NormalFloat", { bg = "none" })
