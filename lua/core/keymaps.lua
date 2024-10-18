@@ -12,10 +12,6 @@ keymap.set("n", "<leader>w", ":update<Return>", opts)
 keymap.set("n", "<leader>q", ":quit<Return>", opts)
 keymap.set("n", "<leader>Q", ":qa<Return>", opts)
 
--- File explorer with NvimTree
-keymap.set("n", "<leader>f", ":NvimTreeFindFile<Return>", opts)
-keymap.set("n", "<leader>t", ":NvimTreeToggle<Return>", opts)
-
 -- Split window
 keymap.set("n", "<leader>v", ":vsplit<Return>", opts)
 
@@ -32,3 +28,11 @@ keymap.set("n", "<leader>gf", vim.lsp.buf.format, {})
 vim.keymap.set("n", "K", vim.lsp.buf.hover, {})
 vim.keymap.set("n", "gd", vim.lsp.buf.definition, {})
 vim.keymap.set("n", "<leader>ca", vim.lsp.buf.code_action, {})
+
+-- Obsidian
+vim.keymap.set("n", "<leader>oo", "<cmd>ObsidianBacklinks<cr>", { desc = "Obsidian Backlinks" })
+vim.keymap.set("n", "<leader>of", "<cmd>ObsidianFollowLink<cr>", { desc = "Obsidian Follow Link" })
+vim.keymap.set("n", "<leader>on", "<cmd>ObsidianNew<cr>", { desc = "Obsidian New Note" })
+vim.keymap.set("n", "<leader>ot", "<cmd>ObsidianToday<cr>", { desc = "Obsidian Today" })
+vim.keymap.set("n", "<leader>oy", "<cmd>ObsidianYesterday<cr>", { desc = "Obsidian Yesterday" })
+vim.keymap.set("n", "<leader>or", "<cmd>ObsidianTomorrow<cr>", { desc = "Obsidian Tomorrow" })
