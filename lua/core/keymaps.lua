@@ -8,8 +8,8 @@ vim.keymap.set("i", "jk", "<Esc>", {})
 keymap.set("n", "<C-a>", "gg<S-v>G")
 
 -- Save file and quit
-keymap.set("n", "<leader>w", ":update<Return>", opts)
-keymap.set("n", "<leader>q", ":quit<Return>", opts)
+keymap.set("n", "<leader>s", ":update<Return>", opts)
+keymap.set("n", "<leader>w", ":quit<Return>", opts)
 keymap.set("n", "<leader>Q", ":qa<Return>", opts)
 
 -- Split window

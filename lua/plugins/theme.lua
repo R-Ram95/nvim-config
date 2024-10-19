@@ -1,5 +1,55 @@
 return {
 	{
+		"xiyaowong/transparent.nvim",
+		config = function()
+			local transparentConfig = require("transparent")
+
+			-- General config
+			transparentConfig.setup({
+				-- table: default groups
+				groups = {
+					"Normal",
+					"NormalNC",
+					"Comment",
+					"Constant",
+					"Special",
+					"Identifier",
+					"Statement",
+					"PreProc",
+					"Type",
+					"Underlined",
+					"Todo",
+					"String",
+					"Function",
+					"Conditional",
+					"Repeat",
+					"Operator",
+					"Structure",
+					"LineNr",
+					"NonText",
+					"SignColumn",
+					"CursorLine",
+					"CursorLineNr",
+					"StatusLine",
+					"StatusLineNC",
+					"EndOfBuffer",
+				},
+				-- table: additional groups that should be cleared
+				extra_groups = {},
+				-- table: groups you don't want to clear
+				exclude_groups = {},
+				-- function: code to be executed after highlight groups are cleared
+				-- Also the user event "TransparentClear" will be triggered
+				on_clear = function() end,
+			})
+
+			-- clear neo tree
+			transparentConfig.clear_prefix("NeoTree")
+			transparentConfig.clear_prefix("Telescope")
+
+		end,
+	},
+	{
 		"binhtran432k/dracula.nvim",
 		lazy = false,
 		name = "dracula",
@@ -8,7 +58,7 @@ return {
 		config = function()
 			require("dracula").setup({
 				style = "soft",
-				transparent = true,
+				-- transparent = true,
 			})
 			vim.cmd("colorscheme dracula")
 		end,
