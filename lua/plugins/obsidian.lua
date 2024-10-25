@@ -34,6 +34,6 @@ return {
       end
       return suffix
     end,
-    disable_frontmatter = true,
+    -- disable_frontmatter = true,
   },
 }

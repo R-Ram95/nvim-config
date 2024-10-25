@@ -1,3 +1,7 @@
+-- Text width and wrapping
+vim.opt.textwidth = 80
+vim.opt.wrap = true
+
 -- Set leader to spacebar
 vim.g.mapleader = " "
 
