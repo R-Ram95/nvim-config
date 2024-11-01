@@ -12,6 +12,7 @@ return {
 				ensure_installed = {
 					"lua_ls",
 					"ts_ls",
+					"yamlls"
 				},
 			})
 		end,
@@ -26,6 +27,10 @@ return {
 				capabilities = capabilities
 			})
 			lspconfig.ts_ls.setup({
+				capabilities = capabilities
+			})
+
+			lspconfig.yamlls.setup({
 				capabilities = capabilities
 			})
 
