@@ -21,6 +21,13 @@ return {
 				top_p = 0.1,
 				n = 1,
 			},
+			chat = {
+				keymaps = {
+					toggle_help = "<leader>H",
+					yank_last = "<C-Y>",
+        	yank_last_code = "<C-K>"
+				}
+			}
 		})
 	end,
 }
