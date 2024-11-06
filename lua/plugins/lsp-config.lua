@@ -12,7 +12,8 @@ return {
 				ensure_installed = {
 					"lua_ls",
 					"ts_ls",
-					"yamlls"
+					"yamlls",
+					"prismals"
 				},
 			})
 		end,
@@ -31,6 +32,10 @@ return {
 			})
 
 			lspconfig.yamlls.setup({
+				capabilities = capabilities
+			})
+
+			lspconfig.prismals.setup({
 				capabilities = capabilities
 			})
 
