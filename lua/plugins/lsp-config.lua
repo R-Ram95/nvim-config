@@ -13,7 +13,9 @@ return {
 					"lua_ls",
 					"ts_ls",
 					"yamlls",
-					"prismals"
+					"prismals",
+					"emmetls",
+					"html_ls"
 				},
 			})
 		end,
@@ -38,6 +40,11 @@ return {
 			lspconfig.prismals.setup({
 				capabilities = capabilities
 			})
+
+			lspconfig.emmet_ls.setup({
+				capabilities = capabilities
+			})
+
 
 			vim.keymap.set("n", "K", vim.lsp.buf.hover, {})
 			vim.keymap.set("n", "gd", vim.lsp.buf.definition, {})
