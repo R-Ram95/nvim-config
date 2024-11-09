@@ -23,7 +23,6 @@ return {
 			{ "<leader>cc", "<cmd>ChatGPT<CR>", desc = "ChatGPT" },
 			{
 				mode = { "n", "v" },
-				{ "<leader>ca", "<cmd>ChatGPTRun add_tests<CR>", desc = "Add Tests" },
 				{ "<leader>cd", "<cmd>ChatGPTRun docstring<CR>", desc = "Docstring" },
 				{ "<leader>ce", "<cmd>ChatGPTEditWithInstruction<CR>", desc = "Edit with instruction" },
 				{ "<leader>cf", "<cmd>ChatGPTRun fix_bugs<CR>", desc = "Fix Bugs" },

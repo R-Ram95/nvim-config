@@ -15,7 +15,8 @@ return {
 					"yamlls",
 					"prismals",
 					"emmetls",
-					"html_ls"
+					"html_ls",
+					"dockerls",
 				},
 			})
 		end,
@@ -27,24 +28,27 @@ return {
 			local lspconfig = require("lspconfig")
 
 			lspconfig.lua_ls.setup({
-				capabilities = capabilities
+				capabilities = capabilities,
 			})
 			lspconfig.ts_ls.setup({
-				capabilities = capabilities
+				capabilities = capabilities,
 			})
 
 			lspconfig.yamlls.setup({
-				capabilities = capabilities
+				capabilities = capabilities,
 			})
 
 			lspconfig.prismals.setup({
-				capabilities = capabilities
+				capabilities = capabilities,
 			})
 
 			lspconfig.emmet_ls.setup({
-				capabilities = capabilities
+				capabilities = capabilities,
 			})
 
+			lspconfig.dockerls.setup({
+				capabilities = capabilities,
+			})
 
 			vim.keymap.set("n", "K", vim.lsp.buf.hover, {})
 			vim.keymap.set("n", "gd", vim.lsp.buf.definition, {})
